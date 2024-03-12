@@ -3,35 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   
-  <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+   
+   .container{
+    border-radius: 15px;
+    width:30%;
+    background-color:white;
+    position:relative;
+    top: -20rem;
+    margin-left: 34%;
 
-  Order Summary
+   }
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+  form{
+    height: 35rem;
+    font-size:16px;
+    font-family: "Red Hat Display", sans-serif;
 
-  Annual Plan
-  $59.99/year
+  }
 
-  Change
-
-  Proceed to Payment
-  Cancel Order
+   body{
+    background-color:hsl(225, 100%, 94%);
+   
+   
+   }
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+   .main-img{
+    border-radius: 15px 15px 0 0;
+   }
+  
+   .header{
+    text-align: center;
+    color:hsl(223, 47%, 23%);
+    font-size: 24px;
+    font-weight: 500;
+
+   }
+
+   .bdy-bdy{
+    text-align: center;
+    color:hsl(224, 23%, 55%);
+    font-size: 12px;
+    word-spacing: 0.3rem;
+    
+   }
+   @media only screen and (max-width:375px) {
+    .container,.header,.bdy-bdy,.flex-container,.cancle,.payment,.change{
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width:1440px) {
+  .container,.header,.bdy-bdy,.flex-container,.cancle,.payment,.change{
+    width: 30%;
+  }
+}
+
+.flex-container{
+  
+  background-color: hsl(225, 100%, 98%);
+  display:flex;
+  margin-left:32px;
+  margin-top: 20px;
+  width: 80%;
+  height: 12%;
+  border-radius:10px;
+  justify-content: flex-start;
+}
+.flex-container>div{
+  margin-left:80px;
+  border-radius:10px;
+  
+}
+.annual{
+  color:hsl(223, 47%, 23%);
+  font-weight: 700;
+  font-size: 12px;
+  margin-left: 50px;
+  margin-top: 20px;
+  position:absolute;
+}
+
+.music{
+  margin-left:55px;
+  margin-top: 25px;
+  width:10%;
+  position:absolute;
+}
+.plan{
+  margin-left: -35px;
+  margin-top:35px;
+  font-size: 11px;
+  color:hsl(224, 23%, 55%);
+  position:absolute;
+}
+
+.change{
+  margin-left:150px;
+  margin-top:25px;
+  font-size:12px ;
+  position:absolute;
+  font-weight: 600;
+}
+.change:hover{
+ color:hsl(256, 76%, 65%);
+}
+.cancle{
+  margin-left:138px;
+  font-size: 14px;
+  margin-top: 20px;
+  background-color:white;
+  border-style: none;
+  font-weight: 600;
+  color: hsl(224, 23%, 55%);
+}
+
+.cancle:hover{
+  color:hsl(223, 47%, 23%);
+}
+.payment{
+  width:80%;
+  height:8%;
+  color:white;
+  background-color: hsl(245, 75%, 52%);
+  border-style: none;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 8px 16px 0 rgba(117, 97, 204, 0.2), 0 6px 20px 0 rgba(117, 97, 204, 0.2);
+  margin-left:32px;
+  margin-top: 20px;
+}
+
+.payment:hover{
+  background-color:hsl(256, 76%, 65%);
+}
+</style>
+</head>
+<body> 
+<img src="pattern-background-desktop.svg" style="width:100%">
+
+<form class="container">
+  
+  <img src="illustration-hero.svg" class="main-img" style="width:100%">
+
+  <p class="header" style="width:100%">
+   <b> Order Summary </b>
+  </p>
+  <p class="bdy-bdy" style="width:100%">
+    You can now listen to millions of songs,<br>audiobooks and poscasts on any device<br> anywhere you like!
+  </p>
+  <img src="icon-music.svg" class="music" style="width:10%">
+  <div class="flex-container">
+    <div class="annual">Annual Plan</div>
+    <div class="plan">$59.99/year</div>
+   <div> <a class="change" href="#">Change</a></div>
   </div>
+
+  <button class="payment" type="button">Proceed to Payment</button>
+  
+  <button type="button" class="cancle">Cancel Order</button>
+</form>
+
+  
+  
 </body>
 </html>
